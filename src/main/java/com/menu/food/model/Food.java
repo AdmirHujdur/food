@@ -5,16 +5,13 @@ public class Food {
 	private String name;
 	private Double price;
 	private String origin;
-	private Integer count=0;
+	
 	
 		
-	public Food(String name, Double price, String origin) {		
-		count ++;
+	public Food(String name, Double price, String origin) {				
 		this.name = name;
 		this.price = price;
-		this.origin = origin;
-		this.count = count;
-		
+		this.origin = origin;				
 	}
 	
 	public String getName() {
@@ -35,11 +32,6 @@ public class Food {
 	public void setOrigin(String origin) {
 		this.origin = origin;
 	}
-	public Integer getCount() {
-		return count;
-	}
-	
-	
 	
 	
 }

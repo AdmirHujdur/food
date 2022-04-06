@@ -1,0 +1,1 @@
+INSERT INTO FOOD VALUES(null,'Pizza',8.34,'Italien');
