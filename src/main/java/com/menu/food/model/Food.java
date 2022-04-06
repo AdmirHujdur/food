@@ -2,22 +2,26 @@ package com.menu.food.model;
 
 public class Food {
 
-	private String foodName;
+	private String name;
 	private Double price;
 	private String origin;
+	private Integer count=0;
 	
-	public Food(String foodName, Double price, String origin) {
-		super();
-		this.foodName = foodName;
+		
+	public Food(String name, Double price, String origin) {		
+		count ++;
+		this.name = name;
 		this.price = price;
 		this.origin = origin;
+		this.count = count;
+		
 	}
 	
-	public String getFoodName() {
-		return foodName;
+	public String getName() {
+		return name;
 	}
-	public void setFoodName(String foodName) {
-		this.foodName = foodName;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public Double getPrice() {
 		return price;
@@ -31,6 +35,11 @@ public class Food {
 	public void setOrigin(String origin) {
 		this.origin = origin;
 	}
+	public Integer getCount() {
+		return count;
+	}
+	
+	
 	
 	
 }
