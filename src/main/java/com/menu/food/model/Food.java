@@ -1,14 +1,16 @@
 package com.menu.food.model;
 
 public class Food {
-
+	
+	private Integer id;
 	private String name;
 	private Double price;
 	private String origin;
 	
 	
 		
-	public Food(String name, Double price, String origin) {				
+	public Food(Integer id, String name, Double price, String origin) {				
+		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.origin = origin;				

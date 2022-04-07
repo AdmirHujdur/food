@@ -2,13 +2,24 @@ package com.menu.food.service;
 
 import org.springframework.stereotype.Service;
 
+import com.menu.food.mapper.FoodMapper;
 import com.menu.food.model.Food;
 
 @Service
 public class FoodService {
+	
+	private FoodMapper foodMapper;
+	
+	public FoodService(FoodMapper foodMapper) {
+		this.foodMapper=foodMapper;
+	}
 
 	public Food[] getFoods() {
-		Food[] foods = {new Food("Pizza", 8.00,"Italien"), new Food("Burger", 5.60, "Amerika"), new Food("Reis", 1.20, "Japan")};
+		Food[] foods = foodMapper.selectFoods();
 		return foods;
+	}
+	
+	public int addFood(Food food) {
+		return foodMapper.insertFood(food);
 	}
 }

@@ -13,7 +13,30 @@ margin: auto;
 </head>
 <body>
 	<div class="content">
-		<h2 th:text=${message}></h2>
+	
+	<h2 th:text=${message}></h2>
+	
+	<form th:object="${food}" th:action="@{/home}" th:method= "POST">
+	  <div class="mb-3">
+	    <label for="exampleInputEmail1" class="form-label">Name des Essens: </label>
+	    <input th:field="*{name}" type="input" name="name"  class="form-control" id="exampleInputEMail1">
+	   
+		     </div>
+			    <div class="mb-3">
+			    <label for="exampleInputPassword1" class="form-label">Preis: </label>
+			    <input th:field="*{price}" type="input" name="price"  class="form-control" id="exampleInputEMail1">
+			  </div>	
+			  
+			<div class="mb-3">
+			    <label for="exampleInputEmail1" class="form-label">Herkunftsland: </label>
+			    <input th:field="*{origin}" type="input" name="origin"  class="form-control" id="exampleInputEMail1">
+	   
+		  	</div>		  
+	  <button type="submit" class="btn btn-primary">AddFood</button>
+	  
+	  <button type="button" class="btn btn-primary">Second Page!</button>
+</form>
+		
 		<table class="table">
 		  <thead>
 			    <tr>
